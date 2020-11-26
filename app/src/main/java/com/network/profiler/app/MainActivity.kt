@@ -1,9 +1,11 @@
-package com.network.profiler
+package com.network.profiler.app
 
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.network.profiler.BuildConfig
+import com.network.profiler.OkHttpProfilerInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.security.SecureRandom

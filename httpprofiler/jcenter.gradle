@@ -6,16 +6,16 @@ version = '1.0.7'
 ext {
     repoName = 'httpprofiler'
     packageName = 'com.network.profiler'
-    publisher = 'itkacher'
-    websiteUrl = 'https://localebro.com/'
+    publisher = 'aaatech'
+    websiteUrl = 'https://github.com/aarunpdy'
     libraryDescription = 'This library is using for Android Studio plugin Okhttp Profiler'
 
-    siteUrl = 'https://github.com/itkacher/OkHttpProfiler'
-    gitUrl = 'https://github.com/itkacher/OkHttpProfiler.git'
+    siteUrl = 'https://github.com/aarunpdy/HttpProfiler'
+    gitUrl = 'https://github.com/aarunpdy/HttpProfiler.git'
 
-    developerId = 'itkacher'
-    developerName = 'Ievgenii Tkachenko'
-    developerEmail = 'itkacher@gmail.com'
+    developerId = 'aaatech'
+    developerName = 'AAA Technology'
+    developerEmail = 'aaatech2014@gmail.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
@@ -23,7 +23,7 @@ ext {
 }
 
 def properties = new Properties()
-properties.load(new FileInputStream("local.properties"))
+properties.load(project.rootProject.file("local.properties").newDataInputStream())
 
 // Because the components are created only during the afterEvaluate phase, you must
 // configure your publications using the afterEvaluate() lifecycle method.
@@ -45,8 +45,8 @@ afterEvaluate {
 }
 
 bintray {
-    user = properties.getProperty("bintrayUser")
-    key = properties.getProperty("bintrayApiKey")
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
     configurations = ['archives']
     override = true
     pkg {
