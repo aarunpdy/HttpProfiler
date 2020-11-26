@@ -1,0 +1,3 @@
+include ':httpprofiler'
+include ':app'
+rootProject.name = "HttpProfiler"
