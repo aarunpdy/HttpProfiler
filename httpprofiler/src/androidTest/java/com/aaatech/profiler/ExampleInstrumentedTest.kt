@@ -1,4 +1,4 @@
-package com.network.profiler
+package com.aaatech.profiler
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

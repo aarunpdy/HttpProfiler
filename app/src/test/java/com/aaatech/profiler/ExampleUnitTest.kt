@@ -1,4 +1,4 @@
-package com.network.profiler
+package com.aaatech.profiler
 
 import org.junit.Test
 

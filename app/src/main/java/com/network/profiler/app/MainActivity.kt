@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.network.profiler.BuildConfig
-import com.network.profiler.OkHttpProfilerInterceptor
+import com.aaatech.profiler.OkHttpProfilerInterceptor
+import com.network.profiler.app.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.security.SecureRandom
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
         val builder = OkHttpClient.Builder()
         builder.sslSocketFactory(sslSocketFactory, trustAllCerts[0] as X509TrustManager)
-        builder.hostnameVerifier { hostname, session -> true }
+        builder.hostnameVerifier { _, _ -> true }
         if (BuildConfig.DEBUG) {
             builder.addInterceptor(OkHttpProfilerInterceptor())
         }

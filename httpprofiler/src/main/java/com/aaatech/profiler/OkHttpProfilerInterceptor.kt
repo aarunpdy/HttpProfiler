@@ -1,7 +1,7 @@
-package com.network.profiler
+package com.aaatech.profiler
 
-import com.network.profiler.transfer.DataTransfer
-import com.network.profiler.transfer.LogDataTransfer
+import com.aaatech.profiler.transfer.DataTransfer
+import com.aaatech.profiler.transfer.LogDataTransfer
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

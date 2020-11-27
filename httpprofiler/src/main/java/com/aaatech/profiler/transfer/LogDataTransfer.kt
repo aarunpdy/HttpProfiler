@@ -1,4 +1,4 @@
-package com.network.profiler.transfer
+package com.aaatech.profiler.transfer
 
 import android.annotation.SuppressLint
 import android.os.*

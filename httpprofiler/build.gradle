@@ -1,6 +1,19 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
+    }
+}
+
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'com.github.dcendents.android-maven'
+    id 'com.jfrog.bintray'
 }
 
 android {
@@ -11,7 +24,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
-        versionName "0.0.1"
+        versionName rootProject.ext.appVersionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -41,4 +54,32 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
 
-apply from: 'jcenter.gradle'
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'http-profiler'
+
+    publishedGroupId = 'com.aaatech.profiler'
+    libraryName = 'CommonLibs'
+    artifact = 'http-profiler'
+
+    libraryDescription = 'This library contains the libs'
+
+    siteUrl = 'https://github.com/aarunpdy/HttpProfiler'
+    gitUrl = 'https://github.com/aarunpdy/HttpProfiler.git'
+
+    libraryVersion = rootProject.ext.appVersionName
+
+    developerId = 'aaatech'
+    developerName = 'AAA Technology'
+    developerEmail = 'aaatech2014@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'script.gradle'
+
+//apply from: 'https://raw.githubusercontent.com/LissF/JCenter/master/script.gradle'
+// run > gradle build bintryUpload
+// https://jcenter.bintray.com/com/aaatech/profiler/http-profiler/0.0.2/
