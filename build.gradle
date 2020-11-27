@@ -27,5 +27,5 @@ task clean(type: Delete) {
 }
 
 ext {
-    appVersionName="0.0.2"
+    appVersionName="0.0.3"
 }
